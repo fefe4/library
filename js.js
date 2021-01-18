@@ -49,6 +49,7 @@ const loopThroughtheLibrary = function () {
     const bookContainer = document.getElementById ("tableBody");
     let row = bookContainer.insertRow(i)
     row.id = "id" + i
+    console.log (row.id)
     const displayTitle = document.createElement('th');
     displayTitle.classList.add('book');
     displayTitle.textContent =   myLibrary [i].title ;
@@ -69,32 +70,34 @@ const loopThroughtheLibrary = function () {
     removeButton.textContent = "Remove";
     removeButton.id = i;
     row.appendChild (removeButton);
+    chocolate()
     
-
     i++;
 }
 
-function removingBook (e) {
-  const gettingRow = document.getElementById ("id" + e );
-  console.log(gettingRow);
-  gettingRow.remove();
+function chocolate () {
+const findBookButton = document.querySelectorAll ('button');
+findBookButton.forEach((button)=>{
+  button.addEventListener('click', () => {
+    const gettingRow = document.getElementById ("id" + button.id );
+    gettingRow.remove();
+  });
+});
 }
-
-removeButton.addEventListener ('click', removingBook(removeButton.id) )
 
 //testing books
  const book1 = new Book ("The Fellowship of The Ring", "Tolkien", "423", "X")
-//  const book2 = new Book ("The Two Towers", "Tolkien", "354", "X" )
-//  const book3 = new Book ("The Return of the King", "Tolkien", "416", "X")
-//  const book4 = new Book ("Dune", "Frank Herbert", "412", "X")
+ const book2 = new Book ("The Two Towers", "Tolkien", "354", "X" )
+ const book3 = new Book ("The Return of the King", "Tolkien", "416", "X")
+ const book4 = new Book ("Dune", "Frank Herbert", "412", "X")
  myLibrary.push (book1);
-//  myLibrary.push (book2);
-//  myLibrary.push (book3);
-//  myLibrary.push (book4); 
+ myLibrary.push (book2);
+ myLibrary.push (book3);
+ myLibrary.push (book4); 
  loopThroughtheLibrary ();
-//  loopThroughtheLibrary ();
-//  loopThroughtheLibrary ();
-//  loopThroughtheLibrary ();
+ loopThroughtheLibrary ();
+ loopThroughtheLibrary ();
+ loopThroughtheLibrary ();
 //testing books
 
 
