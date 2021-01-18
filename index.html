@@ -1,22 +1,43 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="css.css">
+		<link rel="stylesheet"  href="css.css">
 		<script src=js.js defer></script>
 	</head>
 	<body>
-		<div>
-		<p> Title</p>
-		<input type="text" placeholder="Fefe's sad story">
-		<p> Year</p>
-		<input type="text" placeholder="1999">
-		<p> Pages</p>
-		<input type="text" placeholder="295">
-		<p> Read </p>
-		<input type="text" placeholder="Yes">
+		<div class="navbar">
+			<p>fefe's book list</p>
+		</div>
 
+		<table id="bookTable" class ="table">
+			<caption>Books in your list</caption>
+			<thead>
+			  <tr>
+				<th scope="col">Title</th>
+				<th scope="col">Author</th>
+				<th scope="col">Pages</th>
+				<th scope="col">Status</th>
+				<th scope="col"> </th>
+			  </tr>
+			</thead>
+			<tbody id="tableBody"> 
+
+			</tbody>
+			<tfoot>
+			</tfoot>
+		  </table>
+
+		<div class= "addBook">
+		<p> Title</p>
+		<input type="text" id = "title" placeholder="Fefe's sad story">
+		<p> Year</p>
+		<input type="text" id = "author" placeholder="Fefe">
+		<p> Pages</p>
+		<input type="text" id = "pages" placeholder="295">
+		<p> Read </p>
+		<input type="text" id = "read" placeholder="Yes">
+		<button id="addNewBook">add new book</button>
 	</div>
 		<div id="whereTheBooksAre"></div>
-		<button id="addNewBook">add new book</button>
 	</body>	
 </html>

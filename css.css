@@ -1,0 +1,29 @@
+.navbar {
+    position:fixed;
+    display:block;
+    background-color: rgba(168, 3, 3, 0.76);
+    overflow:hidden;
+    width:100%;
+    top:0;
+    left:0;
+    right:0;
+    padding-left:12px;
+}
+.addBook{
+    margin-top: 70px;
+}
+
+.table{
+  margin-top: 70px;
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 3px solid purple;
+}
+
+.book{
+	text-align: center;
+}
+.rowCss {
+ border:red;
+}
